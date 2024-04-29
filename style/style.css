@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+}
+
+:root {
+    --red: #ff3860;
+    --red2:rgb(255, 56, 56);
+    --red-dark: #ff1443;
+    --red-darker: #dc2626;
+    --red-light: #ff5c7c;
+    --blue: #498afb;
+    --blue-dark: #2674fa;
+    --blue-light: #6ca0fc;
+    --orange: #fa8142;
+    --orange-dark: #f96a1f;
+    --orange-light: #fb9865;
+    --green: #09c372;
+    --green-dark: #07a15e;
+    --green-darker: #05633a;
+    --green-light: #0be586;
+    --purple: #9166cc;
+    --purple-dark: #7d4bc3;
+    --purple-light: #a481d5;
+    --pink: #ff4088;
+    --pink-dark: #ff1c72;
+    --pink-light: #ff649e;
+    --yellow: #eab308;
+    --yellow-light: #fdd353;
+    --gray0: #f8f8f8;
+    --gray1: #dbe1e8;
+    --gray2: #b2becd;
+    --gray3: #6c7983;
+    --gray4: #454e56;
+    --gray5: #2a2e35;
+    --gray5t: #0000005b;
+    --gray6: #12181b;
+    --gray7: #0b0d0e;
+    --font-body: "sofia-pro",'Poppins',sans-serif;
+    --font-head: "Tilt Neon",'Poppins', sans-serif;
+    --font-code: "attribute-mono",'Poppins',monospace;
+
+    --stone050: #fafafa;
+    --stone100: #f5f5f4;
+    --stone150: #EEEDEC;
+    --stone200: #e7e5e4;
+    --stone300: #c9c6c3;
+    --stone350: #d6d3d1;
+    --stone400: #a8a29e;
+    --stone500: #78716c;
+    --stone600: #57534e;
+    --stone700: #44403c;
+    --stone800: #292524;
+    --stone900: #1c1917;
+    --stone950: #0c0a09;
+}
