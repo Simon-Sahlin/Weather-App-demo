@@ -1,9 +1,21 @@
 import weatherAPI from "./weatherAPI.js";
+import DOMController from "./DOMController.js";
 
-async function UpdateData(){
-    let data = await weatherAPI.getWeatherData("huh");
-    console.log("Got data:")
-    console.log(data);
-}
 
-UpdateData();
+
+
+let MainController = (function(){
+
+    async function UpdateData(location){
+        let data = await weatherAPI.getWeatherData(location);
+        console.log("Got data:")
+        console.log(data);
+        DOMController.displayWeather(JSON.stringify(data));
+    }
+
+    return {UpdateData};
+})();
+export default MainController;
+
+
+MainController.UpdateData("Gothenburg");
