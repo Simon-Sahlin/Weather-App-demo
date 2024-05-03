@@ -58,3 +58,102 @@
     --stone900: #1c1917;
     --stone950: #0c0a09;
 }
+
+*{
+    font-family: 'Poppins';
+    color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+body{
+    height: 100vh;
+    background: linear-gradient(to bottom, #9cc8dd, #6aa0b7);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ------------------------------------ - ----------------------------------- */
+
+#inputDiv{
+    width: 25vw;
+    display: flex;
+    gap: 10px;
+    margin: 50px;
+}
+#inputDiv input, #inputDiv button{
+    padding: 3px 10px;
+    border-radius: 9999px;
+    font-size: 0.9em;
+    border: none;
+    color: black;
+}
+#inputDiv input{
+    flex-grow: 1;
+}
+#inputDiv button{
+    cursor: pointer;
+}
+#inputDiv button:active{
+    outline: 2px solid black;
+}
+
+/* ------------------------------------ - ----------------------------------- */
+
+#currentData{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 40vw;
+}
+#currentDisplay{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+}
+#currentDisplay > div{
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px 25px;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#currentTemp h4{
+    font-size: 4em;
+    font-weight: 200;
+}
+#currentTemp div{
+    display: flex;
+    gap: 15px;
+}
+#currentWeather img{
+    flex-grow: 1;
+}
+/* #currentExtra{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#currentExtra > div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#currentExtra img{
+    height: 1.5em;
+    margin: -5px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(236deg) brightness(105%) contrast(103%);
+}
+#currentExtra p:nth-child(2){
+    font-size: 0.9em;
+} */
