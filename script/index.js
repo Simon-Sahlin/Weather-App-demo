@@ -10,7 +10,7 @@ let MainController = (function(){
         let data = await weatherAPI.getWeatherData(location);
         console.log("Got data:")
         console.log(data);
-        DOMController.displayWeather(JSON.stringify(data));
+        DOMController.displayWeather(data);
     }
 
     return {UpdateData};
