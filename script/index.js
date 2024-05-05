@@ -18,4 +18,4 @@ let MainController = (function(){
 export default MainController;
 
 
-// MainController.UpdateData("Gothenburg");
+MainController.UpdateData("Gothenburg");
