@@ -105,8 +105,33 @@ let DOMController = (function(){
                     </div>
                 </div>`
         });
+
+        showWeather();
     }
 
-    return {displayWeather};
+    let w1 = document.querySelector("#currentData");
+    let w2 = document.querySelector("#today");
+    let w3 = document.querySelector("#forecast");
+    function showWeather(){
+        w1.classList.remove("hide");
+        w2.classList.remove("hide");
+        w3.classList.remove("hide");
+    }
+    function hideWeather(){
+        w1.classList.add("hide");
+        w2.classList.add("hide");
+        w3.classList.add("hide");
+    }
+
+    let loading = document.querySelector("#loading");
+    function showLoading(){
+        loading.classList.remove("hide");
+    }
+    function hideLoading(){
+        loading.classList.add("hide");
+    }
+
+
+    return {displayWeather, showWeather, hideWeather, showLoading, hideLoading};
 })();
 export default DOMController;
