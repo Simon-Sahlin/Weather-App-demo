@@ -15,6 +15,7 @@ let DOMController = (function(){
     let dispTempL = document.querySelector("#currentTemp > div > p:nth-child(2)");
     let dispWeatherI = document.querySelector("#currentWeather > img");
     let dispWeatherT = document.querySelector("#currentWeather > p");
+    let todayWrapper = document.querySelector("#today > div");
     let forecastWrapper = document.querySelector("#forecast");
     function displayWeather(data){
         console.log("Updating DOM...")
@@ -29,6 +30,23 @@ let DOMController = (function(){
 
         dispWeatherI.setAttribute("src", data.current.condition.icon);
         dispWeatherT.innerHTML = data.current.condition.text;   
+
+        todayWrapper.innerHTML = "";
+        data.forecast.forecastday[0].hour.forEach(hour=>{
+            todayWrapper.innerHTML += `
+                <div class="hour">
+                    <h4>`+new Date(hour.time).getHours()+`:00</h4>
+                    <img src="`+hour.condition.icon+`" alt="">
+                    <p>`+hour.temp_c+`°</p>
+                    <div>
+                        <img src="./img/weather-pouring.svg" alt="">
+                        <p>`+hour.chance_of_rain+`%</p>
+                    </div>
+                </div>
+            `;
+        });
+        todayWrapper.scroll(todayWrapper.querySelector('div').offsetWidth * new Date().getHours(),0);
+
 
         forecastWrapper.innerHTML = "<h4>Upcoming Days</h4>";
         data.forecast.forecastday.forEach(forecast => {

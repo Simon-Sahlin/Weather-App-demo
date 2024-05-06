@@ -84,7 +84,7 @@ body{
     width: 25vw;
     display: flex;
     gap: 10px;
-    margin: 50px;
+    margin: 25px;
 }
 #inputDiv input, #inputDiv button{
     padding: 3px 10px;
@@ -165,7 +165,7 @@ body{
 
 #forecast{
     width: 45vw;
-    margin-top: 50px;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -220,5 +220,51 @@ body{
     margin-left: -10px;
 }
 .dayAttribute > div > p:nth-child(2){
+    font-weight: 200;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+#today{
+    background-color: var(--bg);
+    margin-top: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 10px;
+    scale: 0.9;
+}
+#today > div{    
+    width: 50vw;
+    display: flex;
+    overflow-x: scroll;
+}
+.hour{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+}
+.hour > div{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.hour h4{
+    font-size: 1.2em;
+}
+.hour > img{
+    height: 4em;
+}
+.hour > p{
+    font-size: 1.1em;
+}
+.hour > div > img{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(236deg) brightness(105%) contrast(103%);
+    height: 1em;
+}
+.hour > div > p{
     font-weight: 200;
 }
