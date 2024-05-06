@@ -26,7 +26,7 @@ let weatherAPI = (function(){
                     errorMsg = "Please enter a location. Error Code: "+data.error.code;
                     break;
                 case 1006:
-                    errorMsg = "No location found. Error Code: "+data.error.code;
+                    errorMsg = "No location found, please enter a valid location. Error Code: "+data.error.code;
                     break;
             }
             MainController.throwError("Error Handler", data, errorMsg);

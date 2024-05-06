@@ -16,6 +16,11 @@ let MainController = (function(){
 
     async function UpdateData(location){
 
+        if (!location){
+            alert("Please enter a location.");
+            return;
+        }
+
         console.log("Searching for: " + location);
 
         DOMController.hideWeather();
