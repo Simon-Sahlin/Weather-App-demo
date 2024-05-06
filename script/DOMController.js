@@ -7,6 +7,13 @@ let DOMController = (function(){
     let searchBtn = document.querySelector("button");
     let searchInp = document.querySelector("input");
     searchBtn.addEventListener("click",()=>MainController.UpdateData(searchInp.value));
+    searchInp.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            MainController.UpdateData(searchInp.value);
+            searchInp.blur();
+        }
+      });
 
     let dispLocation = document.querySelector("#location > h2");
     let dispDate = document.querySelector("#location > h3");
