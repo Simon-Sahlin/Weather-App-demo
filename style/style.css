@@ -164,7 +164,7 @@ body{
 /* -------------------------------------------------------------------------- */
 
 #forecast{
-    width: 40vw;
+    width: 45vw;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -172,7 +172,8 @@ body{
 }
 .forecastDay{
     background-color: var(--bg);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
     align-items: center;
     padding: 10px;
     border-radius: 10px;
