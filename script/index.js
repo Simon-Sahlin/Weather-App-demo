@@ -43,4 +43,15 @@ let MainController = (function(){
 export default MainController;
 
 
-MainController.UpdateData("Gothenburg");
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+        position => {
+            MainController.UpdateData(position.coords.latitude+','+position.coords.longitude)
+        },
+        error => {
+            MainController.UpdateData("Gothenburg")
+        }
+    );
+    } else {
+        MainController.UpdateData("Gothenburg");
+}
