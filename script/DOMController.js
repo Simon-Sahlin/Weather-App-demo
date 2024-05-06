@@ -45,7 +45,7 @@ let DOMController = (function(){
                 </div>
             `;
         });
-        todayWrapper.scroll(todayWrapper.querySelector('div').offsetWidth * new Date().getHours(),0);
+        todayWrapper.scroll(todayWrapper.querySelector('div').offsetWidth * new Date(cTime).getHours(),0);
 
 
         forecastWrapper.innerHTML = "<h4>Upcoming Days</h4>";
