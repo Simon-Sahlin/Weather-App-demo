@@ -6,17 +6,34 @@ import DOMController from "./DOMController.js";
 
 let MainController = (function(){
 
-    async function UpdateData(location){
+    function throwError(location, data, msg){
         DOMController.hideWeather();
-        DOMController.showLoading();
-        let data = await weatherAPI.getWeatherData(location);
-        console.log("Got data:")
-        console.log(data);
         DOMController.hideLoading();
-        DOMController.displayWeather(data);
+        console.log("ERROR AT: " + location + "\nData: ");
+        console.log(data);
+        DOMController.showError(msg);
     }
 
-    return {UpdateData};
+    async function UpdateData(location){
+
+        console.log("Searching for: " + location);
+
+        DOMController.hideWeather();
+        DOMController.hideError();
+        DOMController.showLoading();
+
+        let data = await weatherAPI.getWeatherData(location);
+        if (!data)
+            return;
+        console.log("Got data:")
+        console.log(data);
+
+        DOMController.hideLoading();
+        DOMController.displayWeather(data);
+
+    }
+
+    return {UpdateData, throwError};
 })();
 export default MainController;
 

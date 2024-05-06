@@ -131,7 +131,17 @@ let DOMController = (function(){
         loading.classList.add("hide");
     }
 
+    let error = document.querySelector("#error");
+    let errorP = document.querySelector("#error > p");
+    function showError(msg){
+        error.classList.remove("hide");
+        errorP.innerHTML = msg;
+    }
+    function hideError(){
+        error.classList.add("hide");
+    }
 
-    return {displayWeather, showWeather, hideWeather, showLoading, hideLoading};
+
+    return {displayWeather, showWeather, hideWeather, showLoading, hideLoading, showError, hideError};
 })();
 export default DOMController;
